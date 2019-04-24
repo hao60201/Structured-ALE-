@@ -24,7 +24,29 @@
 
 *ALE_STRUCTURED_MESH_MOTION is to make the S-ALE mesh to follow the motion of certain multi-material(s) during the simulation.
 
+<h2>NODESET, SEGSET and SOLIDSET:</h2>
+<ul class="menu"> <li> <a href="./manuals/SET_NODE.pdf">*SET_NODE_GENERAL</a> </li> </ul>
+<ul class="menu"> <li> <a href="./manuals/SET_SEGMENT.pdf">*SET_SEGMENT_GENERAL</a> </li> </ul>
+<ul class="menu"> <li> <a href="./manuals/SET_SOLID.pdf">*SET_SOLID_GENERAL</a> </li> </ul>
 
+Check for options SALEFAC (S-ALE by face) and SALECPT (S-ALE by CONTROL_POINTS) *SET_?_GENERAL. Using these two options are the ONLY way to generate node/segment/solid set.  Please note as mesh is not generated until runtime it is not possible to pick nodes/segments/solids in pre-processors.
+
+<h2>Ambient Elements:</h2>
+<ul class="menu"> <li> <a href="./manuals/BOUNDARY_AMBIENT.pdf">*BOUNDARY_AMBIENT</a> </li> </ul>
+
+*BOUNDARY_AMBIENT is to set up ambient initial and boundary condition in a collection of elements (solid set). Please note "ambient parts" is only in traditional ALE and ILLEGAL in S-ALE.  
+
+<h2>Hydrostatic Elements:</h2>
+<ul class="menu"> <li> <a href="./manuals/ALE_AMBIENT_HYDROSTATIC.pdf">*ALE_AMBIENT_HYDROSTATIC</a> </li> </ul>
+<ul class="menu"> <li> <a href="./manuals/INITIAL_HYDROSTATIC_ALE.pdf">*INITIAL_HYDROSTATIC_ALE</a> </li> </ul>
+
+*INITIAL_HYDROSTATIC_ALE is to set up initial pressure in a collection of elements (solid set). *ALE_AMBIENT_HYDROSTATIC is to apply pressure boundary condition in a collection of elements (solid set). Please note, "ambient parts" is only in traditional ALE and ILLEGAL in S-ALE.  
+
+<h2>Mesh Refinement:</h2>
+<ul class="menu"> <li> <a href="./manuals/ALE_STRUCTURED_MESH_REFINE.pdf">*ALE_STRUCTURED_MESH_REFINE</a> </li> </ul>
+*ALE_STRUCTURED_MESH_REFINE is to refine the <b>initial</b> S-ALE mesh. Node/segment/solid sets defined using SALECPT in *SET_?_GENERAL cards will be adjusted accordingly.
+
+<!-- <h2>Miscellaneous:</h2> -->
 
 </body>
 </html>

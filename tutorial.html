@@ -37,9 +37,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Recent Developement:</h1>
       <p>
-      <h5 class="w3-text-teal"> <a href="./tutorials/2018conf.pptx">Structured ALE Recent Development (2018)</a> </h5>
+      <h1 class="w3-text-teal">Documents:</h2>
+      <h5 class="w3-text-teal">Recent Developement:</h5>
+      <h6> <a href="./tutorials/2018conf.pptx">Structured ALE Recent Development (2018)</a> </h6>
+      <h5 class="w3-text-teal">Class Notes:</h5>
+      <h6> <a href="./tutorials/SALE_2016_class.pdf">Structured ALE training class notes (2016)</a> </h6>
+      <h5 class="w3-text-teal">Conference Papers:</h5>
+      <h6> <a href="./tutorials/08-A_FSI-ALE_025.pdf">Structured ALE New Development</a> </h6>
+      <h6> <a href="./tutorials/08-B_FSI-ALE_041.pdf">Comparative Analysis of Occupant Responses between LS-DYNA ALE and Structured ALE Methods</a> </h6>
       </p> 
     </div>
     <div class="w3-third w3-container">
@@ -49,22 +55,36 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Class Notes:</h1>
       <p>
-      <h5 class="w3-text-teal"> <a href="./tutorials/SALE_2016_class.pdf">Structured ALE training class notes (2016)</a> </h5>
+      <h1 class="w3-text-teal">FAQs:</h1>
+      <h5 class="w3-text-teal">Node/Segment/Solid set</h5>
+      <h6>There are two new options SALEFAC, SALECPT in *SET_NODE/SEGMENT/SOLID_GENERAL. SALEFAC picks all nodes/segments/solids at the S-ALE mesh face.  SALECPT picks the entities inside the box (I1,J1,K1) and (I2,J2,K2) in control_points.</h6>
+      <h6>NOTE: All other options in *SET_?_GENERAL do not work with S-ALE mesh!</h6>
+      <h5 class="w3-text-teal">Ambient</h5>
+      <h6>S-ALE setup doesn't allow for "ambient parts". An "ambient part" contains both the mesh and material properties.  This contradicts the rule that in S-ALE part only serves one role, either mesh or material.</h6>
+      <h6>S-ALE has "ambient elements" instead. Certain part of S-ALE mesh are grouped as solid element set and prescribed as "ambient elements" by using <a href="./manuals/BOUNDARY_AMBIENT.pdf">*BOUNDARY_AMBIENT</a> (Not *BOUNDARY_AMBIENT_EOS).</h6>
+      <h6>Same for <a href="./manuals/INITIAL_HYDROSTATIC_ALE.pdf">*INITIAL_HYDROSTATIC_ALE</a> and <a href="./manuals/ALE_AMBIENT_HYDROSTATIC.pdf">*ALE_AMBIENT_HYDROSTATIC</a>.</h6>
+      <h5 class="w3-text-teal">Mesh Motion</h5>
+      <h6>*ALE_REFERENCE_SYSTEM_GROUP is NOT supported in S-ALE. Mesh follows motion of the origin translationally and rotates with the local coordinate system. Or it can follow the rigid body motion of certain fluids by using <a href="./manuals/ALE_STRUCTURED_MESH_MOTION.pdf">*ALE_STRUCTURED_MESH_MOTION</a>.</h6>
       </p>
     </div>
     <div class="w3-third w3-container">
-      <p class="w3-center"><img src="./figs/side2.jpg" style="width:100%"></p>
+      <p class="w3-center w3-padding-64"><img src="./figs/side2.jpg" style="width:100%"></p>
     </div>
   </div>
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Conference Papers:</h1>
       <p>
-      <h5 class="w3-text-teal"> <a href="./tutorials/08-A_FSI-ALE_025.pdf">Structured ALE New Development</a> </h5>
-      <h5 class="w3-text-teal"> <a href="./tutorials/08-B_FSI-ALE_041.pdf">Comparative Analysis of Occupant Responses between LS-DYNA ALE and Structured ALE Methods</a> </h5>
+      <h1 class="w3-text-teal">Notable points on ALE/FSI:</h1>
+      <h5 class="w3-text-teal">The order in *ALE_MULTI-MATERIAL_GROUP</h5>
+      <h6>The "material part" serves as a wrapper to encapsulate *MAT+*EOS+*HG. They are listed in *ALE_MULTI-MATERIAL_GROUP card to tell the solver: <br>
+1. How many fluids (AMMGs) flow in the ALE domain("mesh part"). <br>
+2. Each AMMG's material property --> (*MAT+*EOS+*HG) <br></h6>
+      <h6>There is also a function, overlooked very often, that frequently leads to failed ALE/FSI analysis. That is: the order in which those parts are listed in *ALE_MULTI-MATERIAL_GROUP plays a crucial role. It determines the order in which material interfaces are constructed in mixed elements. Simply speaking, in a mixed element, the solver would do interface construction for AMMG1, then AMMG1+AMMG2, then AMMG1+AMMG2+AMMG3, so on and forth.</h6>
+      <h6>This means, to correctly reconstuct the fluid interfaces, we need to make sure <B>neighboring materials are listed next to each other</B> under *ALE_MULTI-MATERIAL_GROUP card. Please refer to the slide <a href="./tutorials/ammgorder.pdf">here</a> for a detailed explanation.</h6>
+      <h5 class="w3-text-teal">FSI: LAG/ALE 1:1 mesh size</h5>
+      <h6>We prefer the ALE mesh size to be around the same as the LAG mesh. In interface reconstruction for mixed ALE cells, we only do 1 cut, i.e. we assume the interface is a plane intersecting the ALE cell. So finer LAG mesh won't do any good. Instead it might cause the two interfaces (LAG/ALE) not conciliable.</h6>
       </p>
     </div>
     <div class="w3-third w3-container">

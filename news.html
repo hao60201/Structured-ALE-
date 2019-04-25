@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Structured ALE</title>
+<title>Structured ALE News</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -54,9 +54,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">ALE/S-ALE training class in 2019</h1>
+      <p>
+      <h5 class="w3-text-teal"> <a href="http://www.lstc.com/sites/default/files/marketing/2019_classes/41_LS-DYNA%20Comprehensive%20ALE%20%26%20Structured-ALE%20Modeling%20Methods.pdf">Comprehensive ALE and Structured-ALE Modeling Methods and Applications </a></h5>
+      <h5 class="w3-text-teal"> May 29--May 30, Class in Troy, Michigan </h5>
+	 <h5 class="w3-text-teal"> Oct 30--Oct 31, Class in Livermore, California </h5>
+	 <h5 class="w3-text-teal"> By Dr. Ian Do, ALE support for nearly 20 years </h5>
+	 <h6> Please double check the class name. Do not get confused with another class named "ALE, Eulerian, and Fluid-Structure Interaction in LS-DYNAÂ®" </h6>
+      </p> 
     </div>
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
@@ -66,9 +71,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">Mesh trimming </h1>
+      <p>
+      <h5 class="w3-text-teal"> *ALE_STRUCTURED_MESH_TRIM : <a href="./manuals/ALE_STRUCTURED_MESH_TRIM.pdf">Manual</a> </h5>
+      <h5 class="w3-text-teal"> Added in dev.124272 to trim off elements far away</h5>
+      <h5 class="w3-text-teal"> The resultant mesh is not rectangular any more</h5>
+      <h5 class="w3-text-teal">  <a href="./tutorials/08-A_FSI-ALE_025.pdf"> Paper</a> at 2018 User Conference </h5>
+      <h5 class="w3-text-teal">  Example models <a href="http://ftp.lstc.com/anonymous/outgoing/hao/sale/models/awgbirdstrike/">here</a> and <a href="http://ftp.lstc.com/anonymous/outgoing/hao/sale/models/meshtrim/">here</a>. </h5>
+
+      </p>
     </div>
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
@@ -78,25 +89,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 class="w3-text-teal">Tdeath to delete S-ALE mesh</h1>
+      <p>
+      <h5 class="w3-text-teal"> TDEATH option in *ALE_STRUCTURED_MESH : <a href="./manuals/ALE_STRUCTURED_MESH_dev.pdf">Manual</a> </h5>
+      <h5 class="w3-text-teal"> Added in dev.116748 to delete S-ALE mesh(es) from further calculation.</h5>
+      <h5 class="w3-text-teal"> Also disable all related components such as: </h5> 
+      <h6>Stress calculation, Element update, ALE advection, Fluid structure interaction</h6>
+      <h5 class="w3-text-teal"> Can delete one or multiple S-ALE meshes while keeping other S-ALE meshes alive </h5>
+      </p>
     </div>
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
       <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a class="w3-button w3-black" href="#">1</a>
-      <a class="w3-button w3-hover-black" href="#">2</a>
-      <a class="w3-button w3-hover-black" href="#">3</a>
-      <a class="w3-button w3-hover-black" href="#">4</a>
-      <a class="w3-button w3-hover-black" href="#">5</a>
-      <a class="w3-button w3-hover-black" href="#">»</a>
     </div>
   </div>
 

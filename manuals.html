@@ -1,53 +1,149 @@
 <!DOCTYPE html>
-<html>
-<head><title>Structured ALE Manuals</title></head>
+<html lang="en">
+<title>Structured ALE Manuals</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
 <body>
 
-<h2>Mesh Generation:</h2>
-<ul class="menu"> <li> <a href="./manuals/ALE_STRUCTURED_MESH_dev.pdf">*ALE_STRUCTURED_MESH</a> </li> </ul>
-<ul class="menu"> <li> <a href="./manuals/ALE_STRUCTURED_MESH_CONTROL_POINTS.pdf">*ALE_STRUCTURED_MESH_CONTROL_POINTS</a> </li> </ul>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Main</a>
+    <a href="manuals.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Manuals</a>
+    <a href="tutorial.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tutorials</a>
+    <a href="exes.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Executables</a>
+    <a href="news.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+</div>
 
-*ALE_STRUCTURED_MESH</a> is to generate a S-ALE mesh and invoke S-ALE solver.  It is going to be used together with *ALE_STRUCTURED_MESH_CONTROL_POINTS; which sets up the mesh spacing in 3 directions.
 
-<h2>Initial Volume Filling:</h2>
-<ul class="menu"> <li> <a href="./manuals/ALE_STRUCTURED_MESH_VOLUME_FILLING.pdf">*ALE_STRUCTURED_MESH_VOLUME_FILLING</a> </li> </ul>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:50px">
 
-*ALE_STRUCTURED_MESH_VOLUME_FILLING is to fill the initial S-ALE domain with different multi-materials (AMMGs).
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <p>
+      <h2 class="w3-text-teal">Mesh Generation:</h1>
+      <h5 class="w3-text-teal"><a href="./manuals/ALE_STRUCTURED_MESH_dev.pdf">*ALE_STRUCTURED_MESH</a> </h5>
+      <h5 class="w3-text-teal"><a href="./manuals/ALE_STRUCTURED_MESH_CONTROL_POINTS.pdf">*ALE_STRUCTURED_MESH_CONTROL_POINTS</a> </h5>
+      <h6>*ALE_STRUCTURED_MESH is to generate a S-ALE mesh and invoke S-ALE solver. It is going to be used together with *ALE_STRUCTURED_MESH_CONTROL_POINTS; which sets up the mesh spacing in 3 directions.</h6>
 
-<h2>Mesh Trimming:</h2>
-<ul class="menu"> <li> <a href="./manuals/ALE_STRUCTURED_MESH_TRIM.pdf">*ALE_STRUCTURED_MESH_TRIM</a> </li> </ul>
+      <h2 class="w3-text-teal">Initial Volume Filling:</h1>
+      <h5 class="w3-text-teal"><a href="./manuals/ALE_STRUCTURED_MESH_VOLUME_FILLING.pdf">*ALE_STRUCTURED_MESH_VOLUME_FILLING</a> </h5>
+      <h6>*ALE_STRUCTURED_MESH_VOLUME_FILLING is to fill the initial S-ALE domain with different multi-materials (AMMGs). </h6>
+      </p> 
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-center"><img src="./figs/side1.jpg" style="width:100%"></p>
+    </div>
+  </div>
 
-*ALE_STRUCTURED_MESH_TRIM is to trim the initial S-ALE mesh.  Elements far away from the domain of interest are trimmed and excluded from the calculation.
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <p>
+      <h2 class="w3-text-teal">Mesh Trimming:</h1>
+      <h5 class="w3-text-teal"><a href="./manuals/ALE_STRUCTURED_MESH_TRIM.pdf">*ALE_STRUCTURED_MESH_TRIM</a> </h5>
+      <h6>*ALE_STRUCTURED_MESH_TRIM is to trim the initial S-ALE mesh. Elements far away from the domain of interest are trimmed and excluded from the calculation.</h6>
 
-<h2>Mesh Motion:</h2>
-<ul class="menu"> <li> <a href="./manuals/ALE_STRUCTURED_MESH_MOTION.pdf">*ALE_STRUCTURED_MESH_MOTION</a> </li> </ul>
+      <h2 class="w3-text-teal">Mesh Motion:</h2>
+      <h5 class="w3-text-teal"><a href="./manuals/ALE_STRUCTURED_MESH_MOTION.pdf">*ALE_STRUCTURED_MESH_MOTION</a> </h5>
+      <h6>*ALE_STRUCTURED_MESH_MOTION is to make the S-ALE mesh to follow the motion of certain multi-material(s) during the simulation.  </h6>
+      </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-center"><img src="./figs/side2.jpg" style="width:100%"></p>
+    </div>
+  </div>
 
-*ALE_STRUCTURED_MESH_MOTION is to make the S-ALE mesh to follow the motion of certain multi-material(s) during the simulation.
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <p>
+      <h2 class="w3-text-teal">NODESET, SEGSET and SOLIDSET:</h2>
+      <h5 class="w3-text-teal"><a href="./manuals/SET_NODE.pdf">*SET_NODE_GENERAL</a> </h5>
+      <h5 class="w3-text-teal"><a href="./manuals/SET_SEGMENT.pdf">*SET_SEGMENT_GENERAL</a> </h5>
+      <h5 class="w3-text-teal"><a href="./manuals/SET_SOLID.pdf">*SET_SOLID_GENERAL</a>  </h5>
+      <h6>Check for options SALEFAC (S-ALE by face) and SALECPT (S-ALE by CONTROL_POINTS) *SET_?_GENERAL. Using these two options are the ONLY way to generate node/segment/solid set.  Please note as mesh is not generated until runtime it is not possible to pick nodes/segments/solids in pre-processors. </h6>
 
-<h2>NODESET, SEGSET and SOLIDSET:</h2>
-<ul class="menu"> <li> <a href="./manuals/SET_NODE.pdf">*SET_NODE_GENERAL</a> </li> </ul>
-<ul class="menu"> <li> <a href="./manuals/SET_SEGMENT.pdf">*SET_SEGMENT_GENERAL</a> </li> </ul>
-<ul class="menu"> <li> <a href="./manuals/SET_SOLID.pdf">*SET_SOLID_GENERAL</a> </li> </ul>
+      <h2 class="w3-text-teal">Mesh Refinement:</h2>
+      <h5 class="w3-text-teal"><a href="./manuals/ALE_STRUCTURED_MESH_REFINE.pdf">*ALE_STRUCTURED_MESH_REFINE</a> </h5> 
+      <h6>*ALE_STRUCTURED_MESH_REFINE is to refine the <b>initial</b> S-ALE mesh. Node/segment/solid sets defined using SALECPT in *SET_?_GENERAL cards will be adjusted accordingly. </h6>
+      </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-center"><img src="./figs/side3.jpg" style="width:100%"></p>
+    </div>
+  </div>
 
-Check for options SALEFAC (S-ALE by face) and SALECPT (S-ALE by CONTROL_POINTS) *SET_?_GENERAL. Using these two options are the ONLY way to generate node/segment/solid set.  Please note as mesh is not generated until runtime it is not possible to pick nodes/segments/solids in pre-processors.
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <p>
+      <h2 class="w3-text-teal">Ambient Elements:</h2>
+      <h5 class="w3-text-teal"><a href="./manuals/BOUNDARY_AMBIENT.pdf">*BOUNDARY_AMBIENT</a> </h5> 
+      <h6>*BOUNDARY_AMBIENT is to set up ambient initial and boundary condition in a collection of elements (solid set). Please note "ambient parts" is only in traditional ALE and ILLEGAL in S-ALE.  </h6>
 
-<h2>Ambient Elements:</h2>
-<ul class="menu"> <li> <a href="./manuals/BOUNDARY_AMBIENT.pdf">*BOUNDARY_AMBIENT</a> </li> </ul>
+      <h2 class="w3-text-teal">Hydrostatic Elements:</h2>
+      <h5 class="w3-text-teal"><a href="./manuals/ALE_AMBIENT_HYDROSTATIC.pdf">*ALE_AMBIENT_HYDROSTATIC</a></h5> 
+      <h5 class="w3-text-teal"><a href="./manuals/INITIAL_HYDROSTATIC_ALE.pdf">*INITIAL_HYDROSTATIC_ALE</a></h5> 
+      <h6>*INITIAL_HYDROSTATIC_ALE is to set up initial pressure in a collection of elements (solid set). *ALE_AMBIENT_HYDROSTATIC is to apply pressure boundary condition in a collection of elements (solid set). Please note, "ambient parts" is only in traditional ALE and ILLEGAL in S-ALE.</h6>
+      </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-center"><img src="./figs/side4.jpg" style="width:100%"></p>
+    </div>
+  </div>
+<!-- END MAIN -->
+</div>
 
-*BOUNDARY_AMBIENT is to set up ambient initial and boundary condition in a collection of elements (solid set). Please note "ambient parts" is only in traditional ALE and ILLEGAL in S-ALE.  
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2">
+	<div class="row">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{ clear:left; font:24px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://yahoo.us20.list-manage.com/subscribe/post?u=8b32a216de9515e305c98b0f1&amp;id=0f66d71505" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+    <div class="w3-third w3-container">
+       <p class="w3-left"> Join for Updates and Docs </p>	
+    </div>
+    <div class="w3-third w3-container">
+        <p class="w3-right"> <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required> </p>
+    </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8b32a216de9515e305c98b0f1_0f66d71505" tabindex="-1" value=""></div>
+    <div class="w3-third w3-container">
+    <div class="clear">
+      <p class="w3-left"> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></p>
+    </div>
+    </div>
+    </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
 
-<h2>Hydrostatic Elements:</h2>
-<ul class="menu"> <li> <a href="./manuals/ALE_AMBIENT_HYDROSTATIC.pdf">*ALE_AMBIENT_HYDROSTATIC</a> </li> </ul>
-<ul class="menu"> <li> <a href="./manuals/INITIAL_HYDROSTATIC_ALE.pdf">*INITIAL_HYDROSTATIC_ALE</a> </li> </ul>
 
-*INITIAL_HYDROSTATIC_ALE is to set up initial pressure in a collection of elements (solid set). *ALE_AMBIENT_HYDROSTATIC is to apply pressure boundary condition in a collection of elements (solid set). Please note, "ambient parts" is only in traditional ALE and ILLEGAL in S-ALE.  
+      </div>
+    </div>
+  </footer>
 
-<h2>Mesh Refinement:</h2>
-<ul class="menu"> <li> <a href="./manuals/ALE_STRUCTURED_MESH_REFINE.pdf">*ALE_STRUCTURED_MESH_REFINE</a> </li> </ul>
-*ALE_STRUCTURED_MESH_REFINE is to refine the <b>initial</b> S-ALE mesh. Node/segment/solid sets defined using SALECPT in *SET_?_GENERAL cards will be adjusted accordingly.
-
-<!-- <h2>Miscellaneous:</h2> -->
 
 </body>
 </html>
-

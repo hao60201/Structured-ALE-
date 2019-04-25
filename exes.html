@@ -1,164 +1,144 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html class="js" dir="ltr" version="HTML+RDFa 1.1" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" lang="en"><head profile="http://www.w3.org/1999/xhtml/vocab">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<title>Structured ALE Exes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
 
-  <meta charset="utf-8">
-  
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame  -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Prevent blocking -->
-  <!--[if IE 6]><![endif]-->
-  
-  <title>Introduction to Structured ALE | Livermore Software Technology Corp.</title>
-  <!--[if LT IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  
-  <!--[if lte IE 7]> <div style=' text-align:center; clear: both; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
-
-  <style type="text/css">
-	#block-search-form, 
-	#search-block-form .form-text, 
-	.content ul.pager li a, 
-	.content ul.pager li.pager-current, 
-	#main-wrapper, 
-	.sf-menu .sf-item-1 a:hover, 
-	.sf-menu .sf-item-1 a.active, 
-	.section-2, 
-	.form-submit,
-	.region-header-bottom .block,
-	#block-block-12,
-	section.block,
-	#block-views-feature-block,
-	#quicktabs-tabs{ behavior:url(/sites/all/themes/theme548/js/PIE.php)}
-	</style>
-    
-</head>
-<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-248 node-type-page body with-navigation with-subnav page-applications-ale section-applications">
-
-
-    
-<div id="page-wrapper">
-
-  <div id="page">
-
-    <header id="header" role="banner">
-        <div class="section-1 clearfix">
-                            <div class="col1">
-                </div>
-                    <div class="section-2 clearfix">
-                  <div class="region region-menu">
-    <div id="block-superfish-1" class="block block-superfish block-odd">
-
-      
-  <div class="content">
-
-</div><!-- /.block -->  </div>
-            </div><!-- /.section -->
-            </header><!-- /#header -->
-    
-  <div id="main-wrapper" class="clearfix">
-    <div id="main">
-    	
-                    <aside id="sidebar-second" class="column sidebar" role="complementary">
-                <div class="section">
-                	<div class="ind">
-                    	  <div class="region region-sidebar-second">
-    <section id="block-menu-block-11" class="block block-menu-block block-even">
-
-        <h2>S-ALE menu</h2>
-    
-  <div class="content">
-    <div class="menu-block-wrapper menu-block-11 menu-name-menu-ale parent-mlid-0 menu-level-1">
-  <ul class="menu"><!-- node/249 --><li class="first last collapsed menu-mlid-980"><a href="." title="">Main page</a></li>
-</ul>
-  <ul class="menu"><!-- node/249 --><li class="first last collapsed menu-mlid-980"><a href="./manuals" title="">Manuals</a></li>
-</ul>
-
-  <ul class="menu"><!-- node/249 --><li class="first last collapsed menu-mlid-980"><a href="./models" title="">Example Models</a></li>
-</ul>
-  <ul class="menu"><!-- node/249 --><li class="first last collapsed menu-mlid-980"><a href="./tutorials" title="">Tutorials</a></li>
-</ul>
-
-  </div><!-- /.content -->
-
-</section><!-- /.block -->  </div>
-                    </div>
-                </div><!-- /.section -->
-            </aside><!-- /#sidebar-second -->
-<p> <FONT SIZE=6><B>Known Problems</B></FONT> </p>
-<p> 1. S-ALE timestep drop, mysterious internal energy increase, most likely happen in blast problems. </p>
-
-Fixed in dev.114999 and R9.115000 and R10.115001 on March 04, 2017. Fix NOT available for R9.0.1 and R9.1.0 releases.
-            
-<p> 2. ESORT=1 with MPP, volume fraction might be wrong with *INITIAL_VOLUME_FRACTION_GEOMETRY. </p>
-
-Fixed in dev.121441+dev.121494 and R10.121444+R10.121499. Please use versions later than the above mentioned.
-
-<p> 3. General MPP memory bug. Unpredictable behavior. Avoid using versions between dev.122499 and dev.123354 (DEV only, R9, R10 not affected)</p>
-
-<p> <FONT SIZE=6><B>Version Control</B></FONT> </p>
-
-<p> <b> Dev version: </b> The version developers work on everyday. Contains the latest bug fixs and new features.</p>
-<p> <b> Branch version: </b>The version branched out to prepare for Release. For example, R9 is branched out to prepare for releases R9.0.1, R9.1.0 ... It contains the latest bug fixs but most time no new features. </p>
-<p> <b> Release version:</b> Release version branched out from "Branch version". Like R9.0.1 branched out from R9.  It contains bug fixs until the "cut-off" day.  </p>
-
-<p> <b> The number: </b>The number is an unique tag for a specific SVN version. Larger the number, later the version.  Please note, dev, branch and release all share the same set of numbers.</p>
-
-
-
-<p> <FONT SIZE=6><B>Download executables:</B></FONT> </p>
-
-<p> 1. R9.1 release: (user account) </p> 
-<p> <a href="http://ftp.lstc.com/user/mpp-dyna/R9.1.0/" title="">http://ftp.lstc.com/user/mpp-dyna/R9.1.0/</a>  for mpp  </p>
-<p>  <a href="http://ftp.lstc.com/user/ls-dyna/R9.1.0/" title="">http://ftp.lstc.com/user/ls-dyna/R9.1.0/</a>  for smp </p>
-
-<p> 2. Dev versions: (beta account) </p>
-<p>  <a href=" http://ftp.lstc.com/beta/mpp-lsdyna/Dev/" title=""> http://ftp.lstc.com/beta/mpp-lsdyna/Dev/</a>  for mpp </p>
-<p> <a href=" http://ftp.lstc.com/beta/ls-dyna/Dev/" title=""> http://ftp.lstc.com/beta/ls-dyna/Dev/</a> for smp </p>
-<p> Windows: </p>
-<p>  <a href=" http://ftp.lstc.com/beta/mpp-lsdyna/Dev/windows/" title=""> http://ftp.lstc.com/beta/mpp-lsdyna/Dev/windows/</a>  for mpp </p>
-<p> <a href=" http://ftp.lstc.com/beta/ls-dyna/Dev/windows/" title=""> http://ftp.lstc.com/beta/ls-dyna/Dev/windows/</a> for smp </p>
-
-
-<p>
-Please contact support@lstc.com or hao@lstc.com if you don't know username/password to download.
-</p>
-<p>3. <a href="./exes" >Executables</a> </p>
-</p>
-<p>4. LS-Prepost Executables </p>
-     <a href="http://ftp.lstc.com/anonymous/outgoing/lsprepost/4.3/" >http://ftp.lstc.com/anonymous/outgoing/lsprepost/4.3/</a> </p>
-     <a href="http://ftp.lstc.com/anonymous/outgoing/lsprepost/dev/" >http://ftp.lstc.com/anonymous/outgoing/lsprepost/dev/</a> </p>
-      <footer>
-                </footer>
-  
-  </article><!-- /.node -->
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Main</a>
+    <a href="manuals.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Manuals</a>
+    <a href="tutorial.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tutorials</a>
+    <a href="exes.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Executables</a>
+    <a href="news.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
 </div>
-  </div><!-- /.content -->
 
-</div><!-- /.block -->  </div>
-                
-        </div><!-- /.section -->
-      </div><!-- /#content -->
 
-    </div><!-- /#main -->
-  </div><!-- /#main-wrapper -->
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:50px">
 
-  </div><!-- /#page -->
-  <footer id="footer" role="contentinfo">
-    <div class="section">
-                  <div class="footer-text">
-              <div class="region region-footer">
-    <div id="block-block-7" class="block block-block block-even">
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <p>
+      <h1 class="w3-text-teal">LS-DYNA Version Control:</h1>
+      <h5 class="w3-text-teal">Dev version:</h5>
+      <h6>The version developers work on everyday. Contains the latest bug fixs and new features.</h6>
+      <h5 class="w3-text-teal">Branch version:</h5>
+      <h6>The version branched out to prepare for Release. For example, R9 is branched out to prepare for releases R9.0.1, R9.1.0 ... It contains the latest bug fixs but most time no new features.</h6>
+      <h5 class="w3-text-teal">Release version:</h5>
+      <h6>Release version branched out from "Branch version". Like R9.0.1 branched out from R9.  It contains bug fixs until the "cut-off" day.</h6>
+      <h5 class="w3-text-teal">The number:</h5>
+      <h6>The number is an unique tag for a specific SVN version. Larger the number, later the version.  Please note, dev, branch and release all share the same set of numbers.</h6>
+      </p> 
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-center"><img src="./figs/side1.jpg" style="width:100%"></p>
+    </div>
+  </div>
 
-      
-          </div>
-            </div><!-- /.section -->
-  </footer><!-- /#footer -->
-</div><!-- /#page-wrapper -->
-  
-</body></html>
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <p>
+      <h1 class="w3-text-teal">Download executables:</h1>
+      <h5 class="w3-text-teal">Release: (user account)</h5>
+      <h6><a href="http://ftp.lstc.com/user/mpp-dyna/R11.0.0/" title="">http://ftp.lstc.com/user/mpp-dyna/R11.0.0/</a>  for mpp</h6>
+      <h6><a href="http://ftp.lstc.com/user/ls-dyna/R11.0.0/" title="">http://ftp.lstc.com/user/ls-dyna/R11.0.0/</a>  for smp</h6>
+      <h5 class="w3-text-teal">Dev versions: (beta account)</h5>
+      <h6><a href=" http://ftp.lstc.com/beta/mpp-lsdyna/Dev/" title=""> http://ftp.lstc.com/beta/mpp-lsdyna/Dev/</a>  for mpp</h6>
+      <h6><a href=" http://ftp.lstc.com/beta/ls-dyna/Dev/" title=""> http://ftp.lstc.com/beta/ls-dyna/Dev/</a> for smp</h6>
+      <h6><a href=" http://ftp.lstc.com/beta/mpp-lsdyna/Dev/windows/" title=""> http://ftp.lstc.com/beta/mpp-lsdyna/Dev/windows/</a>  for mpp windows</h6>
+      <h6><a href=" http://ftp.lstc.com/beta/ls-dyna/Dev/windows/" title=""> http://ftp.lstc.com/beta/ls-dyna/Dev/windows/</a> for smp windows</h6>
+      <h6 class="w3-text-blue">*Please contact support@lstc.com or hao@lstc.com for username/password to download.</h6>
+      <h5 class="w3-text-teal">LS-Prepost Executables:</h5>
+      <h6><a href="http://ftp.lstc.com/anonymous/outgoing/lsprepost/4.6/" >http://ftp.lstc.com/anonymous/outgoing/lsprepost/4.6/</a></h6>
+      <h6><a href="http://ftp.lstc.com/anonymous/outgoing/lsprepost/dev/" >http://ftp.lstc.com/anonymous/outgoing/lsprepost/dev/</a></h6>
+      </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-center w3-padding-64"><img src="./figs/side2.jpg" style="width:100%"></p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <p>
+      <h1 class="w3-text-teal">Known Problems</h1>
+      <h5 class="w3-text-teal">S-ALE timestep drop, mysterious internal energy increase, most likely happen in blast problems.</h5>
+      <h6>Fixed in dev.114999 and R9.115000 and R10.115001 on March 04, 2017. Fix NOT available for R9.0.1 and R9.1.0 releases.  </h6>
+      <h5 class="w3-text-teal">ESORT=1 with *INITIAL_VOLUME_FRACTION_GEOMETRY, MPP only. Initial volume fraction might be wrong.</h5>
+      <h6> Fixed in dev.121441+dev.121494 and R10.121444+R10.121499. Please use versions later than the above mentioned.</h6>
+      <h5 class="w3-text-teal">General MPP memory bug. Unpredictable behavior.</h5>
+      <h6>Avoid using versions between dev.122499 and dev.123354 (DEV only, R9, R10 not affected)</h6>
+      </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-center"><img src="./figs/side3.jpg" style="width:100%"></p>
+    </div>
+  </div>
+<!-- END MAIN -->
+</div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2">
+	<div class="row">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{ clear:left; font:24px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://yahoo.us20.list-manage.com/subscribe/post?u=8b32a216de9515e305c98b0f1&amp;id=0f66d71505" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+    <div class="w3-third w3-container">
+       <p class="w3-left"> Join for Updates and Docs </p>	
+    </div>
+    <div class="w3-third w3-container">
+        <p class="w3-right"> <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required> </p>
+    </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8b32a216de9515e305c98b0f1_0f66d71505" tabindex="-1" value=""></div>
+    <div class="w3-third w3-container">
+    <div class="clear">
+      <p class="w3-left"> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></p>
+    </div>
+    </div>
+    </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+
+
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
+      <h1 class="w3-text-teal"></h1>
+      <h5 class="w3-text-teal"></h5>
+      <h5 class="w3-text-teal"></h5>
+      <h5 class="w3-text-teal"></h5>
+      <h6></h6>
+      <h6></h6>
+      <h6></h6>
+      <h6></h6>

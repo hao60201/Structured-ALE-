@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Structured ALE MAIN</title>
+<title>Structured ALE News</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,6 +17,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   height: inherit;
 }
 </style>
+
 <body>
 
 <!-- Navbar -->
@@ -27,10 +28,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a href="tutorial.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tutorials</a>
     <a href="exes.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Executables</a>
     <a href="news.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
   </div>
 </div>
-
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:50px">
@@ -49,57 +49,29 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 3. A leaner solver much easier to maintain and debug.</h6>
       <h5 class="w3-text-teal">Identical (almost) Setup:</h5>
       <h6>Same setup as the generic ALE solver. However, there is a big difference in design to make the setup much easier: In S-ALE, part is either mesh part or material part.<B> IT CAN NOT BE BOTH.</h6>
-      </p> 
+      </p>
     </div>
     <div class="w3-third w3-container">
       <p class="w3-center w3-padding-64"><img src="./figs/side1.jpg" style="width:100%"></p>
     </div>
   </div>
 
-  <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <p>
-      <h1 class="w3-text-teal">3-step Setup</h1>
-      <h5 class="w3-text-teal">1. Generating Mesh</h5>
-      <h6>a. 3 control_points cards --> mesh spacing in x,y,z direction. <br>
- b. 1 ale_structured_mesh card to generate mesh. --> mesh part <br></h6>
-      <h5 class="w3-text-teal">2. Defining Multi-materials</h5>
-      <h6>a. For each ALE material, define a part card. Each part serves as a wrapper to include *MAT+*EOS+*HOURGLASS. -->  material parts <br>
- b. List all ALE multi-material part IDs under *ALE_MULTI-MATERIAL_GROUP card. <br></h6>
-      <h5 class="w3-text-teal">3. Volume Filling</h5>
-      <h6>Use <a href="./manuals/ALE_STRUCTURED_MESH_VOLUME_FILLING.pdf">*ALE_STRUCTURED_MESH_VOLUME_FILLING</a> to fill the S-ALE mesh part with multi-materials (fluids). Fill by simple geometries like box, plane, sphere, cylinder or by use-provided segment/part set.</h6>
-      </p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-center"><img src="./figs/side2.jpg" style="width:100%"></p>
-    </div>
-  </div>
-
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <p>
-      <h1 class="w3-text-teal">Mesh Part and Material Part(s): </h1>
-      <h5 class="w3-text-teal">In Structured ALE, a part definition refers to either mesh or material properties. NEVER both. </h5>
-      <h5 class="w3-text-teal">Mesh part:</h5>
-      <h6>Mesh only(elements, nodes); no material associated with it; defined through PID in *ALE_STRUCTURED_MESH. In ALL ALE related keywords, PID should be mesh part ID.</h6>
-      <h5 class="w3-text-teal">Material parts:</h5> 
-      <h6>Material properties (*MAT+*EOS+*HG); no mesh at all; defined through *PART. Their IDs are only to appear ONCE in *ALE_MULTI-MATERIAL_GROUP. Any other reference to their PIDs is WRONG.</h6>
-      <h6> S-ALE enforces a 1 to 1 correspondence between material parts and ale multi-material groups (ammgs). The material partid should ONLY appear in *ALE_MULTI-MATERIAL_GROUP card and nowhere else. </h6>
-      </p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-center"><img src="./figs/side3.jpg" style="width:100%"></p>
-    </div>
-  </div>
-
-  </div>
-<!-- END MAIN -->
+<!-- Begin Mailchimp Signup Form -->
+<div id="mailchimp">
+<form action="https://yahoo.us20.list-manage.com/subscribe/post?u=8b32a216de9515e305c98b0f1&amp;id=0f66d71505" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <h4 class="w3-center">
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8b32a216de9515e305c98b0f1_0f66d71505" tabindex="-1" value=""></div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"> </h4>
+</form>
 </div>
 
+<!--End mc_embed_signup-->
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2">
-       <h4 class="w3-center w3-padding-24"> Join for Updates, Examples and Docs @ CONTACT</h4>	
+       <h4 class="w3-center w3-padding-24"> Join for Updates, Examples and Docs above</h4>
     </div>
   </footer>
+
 </body>
 </html>

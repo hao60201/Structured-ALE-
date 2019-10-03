@@ -1,0 +1,804 @@
+      Date: 07/19/2019      Time: 14:26:53  
+
+     ___________________________________________________
+     |                                                 |
+     |  Livermore  Software  Technology  Corporation   |
+     |                                                 |
+     |  7374 Las Positas Road                          |
+     |  Livermore, CA 94551                            |
+     |  Tel: (925) 449-2500  Fax: (925) 449-2507       |
+     |  www.lstc.com                                   |
+     |_________________________________________________|
+     |                                                 |
+     |  LS-DYNA, A Program for Nonlinear Dynamic       |
+     |  Analysis of Structures in Three Dimensions     |
+     |  Version : mpp s Dev       Date: 07/19/2019     |
+     |  Revision: 139039          Time: 14:09:31       |
+     |                                                 |
+     |  Features enabled in this version:              |
+     |    Distributed Memory Parallel                  |
+     |    FFTW (multi-dimensional FFTW Library)        |
+     |    BigID  option                                |
+     |                                                 |
+     |  Licensed to: LSTC                              |
+     |                                                 |
+     |  Platform   : Xeon64                            |
+     |  OS Level   : Linux uu                          |
+     |  Compiler   : Intel Fortran Compiler 16.0 SSE2  |
+     |  Hostname   : compute-0-32.local                |
+     |  Precision  : Single precision (I4R4)           |
+     |  SVN Version: 139039                            |
+     |                                                 |
+     |  Unauthorized use infringes LSTC copyrights     |
+     |_________________________________________________|
+
+
+ Input file: tankimp10.k                                                                     
+
+ The native file format       : 32-bit small endian
+ Memory size from default     :   100000000,            0
+ JOBID                        : clis
+ Memory option                : AUTO selected
+ Memory size from default     :   100000000,    100000000
+
+ Memory for the head node
+ Memory installed (MB)        :        96872
+ Memory available (MB)        :        96141
+
+ ********  notice  ********  notice  ********  notice  ********
+ *                                                            *
+ * This is the LS-DYNA Finite Element code.                   *
+ *                                                            *
+ * Neither LSTC nor the authors assume any responsibility for *
+ * the validity, accuracy, or applicability of any results    *
+ * obtained from this system. Users must verify their own     *
+ * results.                                                   *
+ *                                                            *
+ * LSTC endeavors to make the LS-DYNA code as complete,       *
+ * accurate and easy to use as possible.                      *
+ * Suggestions and comments are welcomed.  Please report any  *
+ * errors encountered in either the documentation or results  *
+ * immediately to LSTC through your site focus.               *
+ *                                                            *
+ * Copyright (C) 1990-2018                                    *
+ * by Livermore Software Technology Corp. (LSTC)              *
+ * All rights reserved                                        *
+ *                                                            *
+ ********  notice  ********  notice  ********  notice  ********
+ 
+LSTC Environment Variables:
+ 
+LSTC_FILE=server
+LSTC_LICENSE_SERVER=license.lstc.com
+LSTC_RSH=ssh -x
+LSTC_NOTRAP=1
+LSTC_MEMORY=auto
+ 
+
+ Beginning of keyword reader                                   07/19/19 14:26:53
+ allocating  memory to   100000000 d       32864 beginning of keyword reader
+
+ *COMMENT
+        0.1
+        101         0     17836      10.0
+        102         0     17198      10.0
+        103         0     17464      10.0
+        104         0     16891      10.0
+        105         0     16826      10.0
+        106         0      8326      10.0
+        107         0      8654      10.0
+        108         0      8016      10.0
+        109         0      8347      10.0
+        110         0      8673      10.0
+        111         0      8034      10.0
+ expanding   memory to       65000 d      412286  
+ expanding   memory to       95000 d      412286  
+ expanding   memory to      647288 d      412286  
+ expanding   memory to      693312 d      412286  
+ expanding   memory to      720612 d      412286  
+ expanding   memory to      888708 d      412286  
+ expanding   memory to     1056804 d      412286  
+ expanding   memory to     1079030 d      412286  
+ expanding   memory to     1194030 d      412286  
+
+ Open include file: gastankgeomb8.k
+
+ Open include file: sale.k
+
+ Open include file: mesh_sale.k
+ expanding   memory to     1214462 d      412286  
+ expanding   memory to     1244562 d      412286  
+ expanding   memory to     1267702 d      412286  
+ expanding   memory to     1288116 d      412286  
+
+********** echo of pfile data **********
+
+decomp { aledist }
+
+*********** end of pfile data **********
+ expanding   memory to     1329570 d      412310  
+ expanding   memory to     1370728 d      412310  
+ expanding   memory to     1823466 d      412310  
+ expanding   memory to     1864490 d      412310  
+ expanding   memory to     1905514 d      412310  
+ expanding   memory to     1946672 d      412310  
+ expanding   memory to     2045014 d     1420307  
+ expanding   memory to     2143340 d     1420307  
+ expanding   memory to     3225316 d     1420617  
+ expanding   memory to     3323642 d     1420617  
+ expanding   memory to     3463126 d     1420617  
+ expanding   memory to     3485626 d     1420617  
+
+ Memory required to process keyword     :    3485626  
+ Additional dynamic memory required     :    1421736  
+
+ allocating  memory to   100000000 d     1297563 end of keyword reader
+
+ MPP execution with      48 procs
+
+ LS-DYNA will perform a structural only analysis 
+
+
+ Initial reading of file                                       07/19/19 14:26:53
+ tankimp10.k: LSTC tank impact demo, PRTYPE=9: kg-mm-ms-K                
+                         ls-dyna mpp.139039 s           date 07/19/2019
+ expanding   memory to        5081 d      215599 material, node and element data
+ expanding   memory to        5184 d      215661 mat add general damage 0
+ expanding   memory to        5264 d      215661 material added airbag porosity leakage 
+ expanding   memory to        5288 d      215661 material properties
+ expanding   memory to        5312 d      602351 element data for composite material
+ expanding   memory to        5346 d     7714963 gradient of damage data
+ expanding   memory to        5560 d     8084189 user control for contact interfaces
+ contracting memory to        5548 d     8084189 thermal expansion 0
+ expanding   memory to      145031 d     8084237 temp index array for node sorting
+ contracting memory to        5548 d     8223724 just because?
+ expanding   memory to       46572 d     8502714 arbitrary element numbering input
+ contracting memory to        5568 d     8707865 spc cards
+ contracting memory to        5556 d     8707913 rcforc moments
+ expanding   memory to        5557 d     8850865 process element material data
+ expanding   memory to        7613 d     8850857 load curve data
+ expanding   memory to       10254 d     8850918 user_define_loading_set
+ expanding   memory to       10466 d     8850918 regularize time history data
+ contracting memory to       10258 d     8850918 *DEFINE_ELEMENT_DEATH
+ contracting memory to       10258 d     8990402 nodal constraint sets
+ expanding   memory to       10537 d     8991293 contact interfaces
+ expanding   memory to       11329 d     9270259 S-ALE mesher control block
+ contracting memory to       11329 d     9270668 before call to elgen
+ expanding   memory to       12329 d     9762965 contact segment data 1
+ contracting memory to       12329 d    10091943 contact segment data 2
+ expanding   memory to      709744 d    10174259 contact segment data 3
+ contracting memory to      709744 d    10174259 contact segment data 4
+ contracting memory to       11329 d    10231402 contact definition
+ expanding   memory to       11401 d    10231403 rigid body
+ expanding   memory to       11405 d    10239792 contact friction
+ expanding   memory to       11525 d    10239792 joints
+ contracting memory to       11525 d    10240392 accelerometers
+ expanding   memory to       11531 d    10241217 control volume input
+
+Checking Control Volume Orientations
+
+ Control Volume ID            1
+   convergence of normal check obtained in  26 iterations
+   region 1 has 36672 segments.
+   number of independent regions where normal vectors
+   are checked and if necessary reset =    1
+   number of renumbered segments = 0
+ expanding   memory to       11539 d    10620419 control volume input 4
+ expanding   memory to       11631 d    10657093 rigid bodies for disp. termination
+ contracting memory to       11631 d    11075542 transformation to move nodes
+ expanding   memory to       11718 d    11075593 s-ale memory alloc in mmalemsh_init0
+ expanding   memory to       11818 d    11215051 ALE hydrostatic pressure I.C. 1
+ expanding   memory to       12289 d    11215051 ALE fsi control block
+ expanding   memory to       12298 d    11494017 ALE fsi node and seg list
+ contracting memory to       12298 d    14493918 ALE fsi seg connectivity
+ expanding   memory to       12300 d    29016112 ALE fsi coupling forces
+ expanding   memory to       12400 d    29016112 ALE storage for coupling shape functions
+ expanding   memory to       12423 d    28778170 ALE dbale init step -          1                                                
+ expanding   memory to       12425 d    28778170 ALE dbale init step -          2                                                
+ expanding   memory to      562545 d    28778170 ALE dbale init step -          3                                                
+ expanding   memory to      702028 d    28778170 ALE dbale init step -          4                                                
+ contracting memory to      702028 d    28778170 ALE dbale init step -          5                                                
+ expanding   memory to      702171 d    28778170 S-ALE mesher control block
+ S-ALE init volume fraction geometry 1
+ expanding   memory to      702179 d    28922321 mat add cohesive 0
+ expanding   memory to      702201 d    28922321 sensor_control for curve
+ expanding   memory to      702209 d    28922321 flexible body 2
+
+ Performing Decomposition -- Phase 1                           07/19/19 14:26:55
+ expanding   memory to      895262 d      792629 decomp reverse connectivity
+ expanding   memory to     1597246 d      792629 element ownership
+
+Decomposition region 1:
+
+   Part list
+
+Decomposition region 2:
+
+   Everything
+
+Region  1 is distributed to 48 processors
+
+   With no coordinate transformation
+
+Region  2 is distributed to 48 processors
+
+   With no coordinate transformation
+
+Normalized element costs assigned during decomposition:
+            Minumum: 9.995901E-01
+            Maximum: 1.000466E+00
+ Standard Deviation: 2.147856E-04
+
+ contracting memory to     1166938 d      932160 constraint scratch
+ contracting memory to     1064127 d     1071643 con segment decomp rewrite
+ expanding   memory to     1068479 d     1071643 con segment decomp rewrite
+ expanding   memory to     1166939 d     1071643 shadow node processing
+ expanding   memory to     1306471 d      932160 share node processing
+ contracting memory to     1104928 d      842821 nodal sharing list
+ expanding   memory to     1123315 d      842821 nodal sharing list s-ale
+
+ Memory required for decomposition      :    1597246  
+ Additional dynamic memory required     :   29850241  
+
+ allocating  memory to   100000000 d      637652 Allocate memory top of decomps
+ expanding   memory to       91169 d      546484 hex sale ownership chunk
+ contracting memory to       91169 d      548384 hex sale sort chunk
+ contracting memory to       41025 d      550284 shell ownership chunk
+ contracting memory to       41025 d      551103 shell sort chunk
+ contracting memory to           9 d      551922 material sort chunk
+ expanding   memory to          25 d      551922 material uid
+ expanding   memory to          74 d      397887 nodal force sharing lists 1
+
+ Performing Decomposition -- Phase 2                           07/19/19 14:26:55
+ expanding   memory to          82 d      395001 mat scratch
+ contracting memory to          82 d     1395004 cross section scratch
+ contracting memory to          82 d     1395004 cross sections
+ contracting memory to          82 d     1395004 pressure b.c. data
+ contracting memory to          82 d     1395006 rigid walls
+ contracting memory to          82 d     1421989 tied nodes scratch
+ expanding   memory to          83 d     1421989 tied nodes scratch
+ expanding   memory to         130 d     1421989 tied node scratch
+ contracting memory to          82 d     1421989 nodal rigid body scratch
+ contracting memory to          82 d     1421989 spring/damper scratch
+ contracting memory to          82 d     1421989 seat belt ownership
+ expanding   memory to          83 d     1421989 control volumes
+ expanding   memory to         135 d     1458662 control volumes
+ expanding   memory to      183464 d     1421992 tied ale scratch
+ contracting memory to         102 d     1421996 ale fsi scratch
+ expanding   memory to      280132 d     1421996 ale db 1
+ contracting memory to          68 d     2894690 ALE message buffers
+ expanding   memory to         164 d     2894690 ALE message buffers 2
+ expanding   memory to         260 d     2894690 ALE message buffers 2
+ expanding   memory to         356 d     2894690 ALE message buffers 2
+ expanding   memory to        5319 d     2894690 ALE share node
+ contracting memory to        5319 d     1899135 Performing Decomposition -- Phase 3
+ Performing Decomposition -- Phase 3                           07/19/19 14:26:55
+ tankimp10.k: LSTC tank impact demo, PRTYPE=9: kg-mm-ms-K                
+                         ls-dyna mpp.139039 s           date 07/19/2019
+ expanding   memory to       10399 d     1902988 material, node and element data
+ expanding   memory to       10502 d     1903050 mat add general damage 0
+ expanding   memory to       10582 d     1903050 material added airbag porosity leakage 
+ expanding   memory to       10606 d     1903050 material properties
+ expanding   memory to       10630 d     1931337 element data for composite material
+ expanding   memory to       10691 d     2108604 gradient of damage data
+ expanding   memory to       11649 d     2158407 user control for contact interfaces
+ contracting memory to       11637 d     2158407 thermal expansion 0
+ expanding   memory to       15001 d     2158455 temp index array for node sorting
+ contracting memory to       11637 d     2158455 just because?
+ expanding   memory to       13537 d     2165207 arbitrary element numbering input
+ 
+ *** Warning 20289 (STR+289)
+     Number of elements exceed warpage angle = 24
+       min warpage angle = 3.3232E+01
+       max warpage angle = 9.6499E+01
+ contracting memory to       11657 d     2178109 spc cards
+ contracting memory to       11646 d     2178109 d3thdt storage
+ contracting memory to       11646 d     2178109 rcforc moments
+ expanding   memory to       11647 d     2328497 process element material data
+ expanding   memory to       13703 d     2328489 load curve data
+ expanding   memory to       16344 d     2328491 user_define_loading_set
+ expanding   memory to       16556 d     2328491 regularize time history data
+ contracting memory to       16348 d     2328491 *DEFINE_ELEMENT_DEATH
+ contracting memory to       16348 d     2335221 nodal constraint sets
+ expanding   memory to       16420 d     2335221 MPP copy of tim vector
+ expanding   memory to       16699 d     2315938 contact interfaces
+ expanding   memory to       17491 d     2375441 S-ALE mesher control block
+ expanding   memory to       18491 d     2385948 contact segment data 1
+ contracting memory to       18491 d     2409068 contact segment data 2
+ expanding   memory to       43783 d     2410888 contact segment data 3
+ contracting memory to       43783 d     2410888 contact segment data 4
+ contracting memory to       17491 d     2522697 contact definition
+ contracting memory to       17491 d     2522740 Top of contact alloc
+ contracting memory to       17491 d     2522740 contact init
+ expanding   memory to       17541 d     2536492 contact history
+ contracting memory to       17541 d     2539171 contact final bits
+ expanding   memory to       17613 d     2539191 rigid body
+ expanding   memory to       17637 d     2539191 rbe2 scratch
+ expanding   memory to       17789 d     2539193 rigid body flags scratch
+ contracting memory to       17613 d     2539193 free rigid body flags scratch
+ expanding   memory to       17617 d     2535807 contact friction
+ expanding   memory to       17737 d     2535815 joints
+ contracting memory to       17737 d     2558183 discrete element
+ contracting memory to       17737 d     2558183 accelerometers
+ expanding   memory to       17743 d     2559008 control volume input
+ expanding   memory to       17751 d     2615539 control volume input 4
+ expanding   memory to       17843 d     2616446 rigid bodies for disp. termination
+ expanding   memory to       17901 d     2616446 save d3plot control data
+ contracting memory to       17901 d     2626538 transformation to move nodes
+ expanding   memory to       17988 d     2625861 s-ale memory alloc in mmalemsh_init0
+ expanding   memory to       18088 d     2844147 ALE hydrostatic pressure I.C. 1
+ expanding   memory to       19988 d     2846047 ALE hydrostatic pressure I.C. 2
+ expanding   memory to       20459 d     2844147 ALE fsi control block
+ expanding   memory to       20462 d     2850875 ALE fsi node and seg list
+ contracting memory to       20462 d     2942789 ALE fsi seg connectivity
+ expanding   memory to       20464 d     3270291 ALE fsi coupling forces
+ expanding   memory to       20564 d     3270291 ALE storage for coupling shape functions
+ expanding   memory to       20587 d     3263573 ALE dbale init step -          1                                                
+ contracting memory to       20587 d     3263573 ALE dbale init step -          2                                                
+ expanding   memory to       32912 d     3263573 ALE dbale init step -          3                                                
+ expanding   memory to       36276 d     3263573 ALE dbale init step -          4                                                
+ contracting memory to       36276 d     3263573 ALE dbale init step -          5                                                
+ expanding   memory to       36419 d     3263573 S-ALE mesher control block
+
+ S-ALE init volume fraction geometry 2 start    
+
+ S-ALE init volume fraction geometry 2 end      
+ expanding   memory to       36427 d     3595160 mat add cohesive 0
+ expanding   memory to       36449 d     3595160 sensor_control for curve
+ expanding   memory to       36457 d     3595160 flexible body 2
+ expanding   memory to       43186 d     3595163 weld node list 1
+ expanding   memory to       44642 d     3595163 weld node list 2
+ contracting memory to       39823 d     3595163 global pointers for welds
+ contracting memory to       36458 d     3595163 global shared weld node list 1
+ expanding   memory to       37187 d     3595163 global shared weld node list 2
+ expanding   memory to       37198 d     3595163 control volumes
+ expanding   memory to       37230 d     3635964 mpp general scratch
+ contracting memory to       37230 d     3635964 bndout working scratch
+ 
+ *** Warning 30128 (INI+128)
+     Massless nodes
+     The following massless nodes were found
+     Processor: 0
+ 294095
+     Processor: 1
+ 900001
+     Processor: 2
+ 900002
+ 
+ *** Warning 30131 (INI+131)
+     total number of massless nodes = 3
+
+     slave surface of interface   = 1
+     type                         =        25
+     surface timestep             = 8.137E-03
+     controlling slave node ID    = 35093
+     part ID of slave node        = 1
+     current minimum time step    = 8.137E-03
+
+     slave surface of interface   = 2
+     type                         =        25
+     surface timestep             = 2.992E-03
+     controlling slave node ID    = 120898
+     part ID of slave node        = 6
+     current minimum time step    = 2.992E-03
+
+     slave surface of interface   = 3
+     type                         =        13
+     surface timestep             = 2.992E-03
+     controlling slave node ID    = 120898
+     part ID of slave node        = 6
+     current minimum time step    = 2.992E-03
+
+ The LS-DYNA time step size should not exceed     2.992E-03
+ to avoid contact instabilities.  If the step size is
+ bigger then scale the penalty of the offending surface.
+
+ The following binary output files are being created,
+ and contain data equivalent to the indicated ascii output files
+   binout0000: (on processor       0)
+    glstat                                  
+    matsum                                  
+    rcforc                                  
+    abstat                                  
+    dbfsi                                   
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to begin solution      :     281K
+ Additional dynamically allocated memory:    4724K
+                                   Total:    5004K
+ expanding   memory to       40594 d     3640083 thermal tmass
+      
+      initial time step by element number
+      controlling element is in square brackets
+
+ 100 smallest timesteps
+ ------------------------------------------------
+ element       number                part    timestep
+ shell           5389                   1  3.4006E-03
+ shell           5384                   1  3.4006E-03
+ shell           5388                   1  3.4006E-03
+ shell           5398                   1  3.4006E-03
+ shell           5397                   1  3.4006E-03
+ shell           5387                   1  3.4006E-03
+ shell           5399                   1  3.4006E-03
+ shell           5396                   1  3.4006E-03
+ shell           5395                   1  3.4006E-03
+ shell           5392                   1  3.4006E-03
+ shell           5391                   1  3.4006E-03
+ shell           5390                   1  3.4006E-03
+ shell           5394                   1  3.4006E-03
+ shell           5393                   1  3.4006E-03
+ shell           5386                   1  3.4006E-03
+ shell           5385                   1  3.4007E-03
+ shell           5345                   1  3.4007E-03
+ shell           5348                   1  3.4007E-03
+ shell           5346                   1  3.4007E-03
+ shell           5349                   1  3.4007E-03
+ shell           5358                   1  3.4007E-03
+ shell           5357                   1  3.4007E-03
+ shell           5356                   1  3.4007E-03
+ shell           5355                   1  3.4007E-03
+ shell           5354                   1  3.4007E-03
+ shell           5352                   1  3.4007E-03
+ shell           5351                   1  3.4007E-03
+ shell           5350                   1  3.4007E-03
+ shell           5347                   1  3.4007E-03
+ shell           5359                   1  3.4007E-03
+ shell           5353                   1  3.4007E-03
+ shell           3692                   1  3.5244E-03
+ shell           3715                   1  3.5245E-03
+ shell           3738                   1  3.5246E-03
+ shell           3761                   1  3.5246E-03
+ shell           3784                   1  3.5247E-03
+ shell           3807                   1  3.5248E-03
+ shell           3830                   1  3.5248E-03
+ shell           3853                   1  3.5249E-03
+ shell           3876                   1  3.5249E-03
+ shell           3899                   1  3.5249E-03
+ shell           3922                   1  3.5250E-03
+ shell           3968                   1  3.5251E-03
+ shell           3945                   1  3.5251E-03
+ shell           3991                   1  3.5252E-03
+ shell           4014                   1  3.5252E-03
+ shell           4037                   1  3.5253E-03
+ shell           3693                   1  3.5271E-03
+ shell           3716                   1  3.5272E-03
+ shell           3739                   1  3.5273E-03
+ shell           3762                   1  3.5273E-03
+ shell           3785                   1  3.5274E-03
+ shell           3808                   1  3.5274E-03
+ shell           3831                   1  3.5275E-03
+ shell           3854                   1  3.5276E-03
+ shell           3877                   1  3.5276E-03
+ shell           3900                   1  3.5277E-03
+ shell           3923                   1  3.5277E-03
+ shell           3946                   1  3.5278E-03
+ shell           3992                   1  3.5279E-03
+ shell           3969                   1  3.5279E-03
+ shell           4015                   1  3.5279E-03
+ shell           4038                   1  3.5280E-03
+ shell           3694                   1  3.5299E-03
+ shell           3717                   1  3.5300E-03
+ shell           3740                   1  3.5300E-03
+ shell           3763                   1  3.5300E-03
+ shell           3786                   1  3.5302E-03
+ shell           3809                   1  3.5302E-03
+ shell           3855                   1  3.5303E-03
+ shell           3832                   1  3.5303E-03
+ shell           3878                   1  3.5304E-03
+ shell           3901                   1  3.5304E-03
+ shell           3924                   1  3.5305E-03
+ shell           3947                   1  3.5305E-03
+ shell           3970                   1  3.5306E-03
+ shell           4016                   1  3.5306E-03
+ shell           3993                   1  3.5306E-03
+ shell           4039                   1  3.5307E-03
+ shell           3695                   1  3.5326E-03
+ shell           3718                   1  3.5327E-03
+ shell           3741                   1  3.5328E-03
+ shell           3764                   1  3.5328E-03
+ shell           3787                   1  3.5328E-03
+ shell           3810                   1  3.5329E-03
+ shell           3833                   1  3.5330E-03
+ shell           3856                   1  3.5330E-03
+ shell           3879                   1  3.5331E-03
+ shell           3902                   1  3.5331E-03
+ shell           3948                   1  3.5332E-03
+ shell           3925                   1  3.5332E-03
+ shell           3971                   1  3.5333E-03
+ shell           3994                   1  3.5333E-03
+ shell           4017                   1  3.5333E-03
+ shell           4040                   1  3.5334E-03
+ shell           3696                   1  3.5353E-03
+ shell           3719                   1  3.5354E-03
+ shell           3742                   1  3.5355E-03
+ shell           3765                   1  3.5355E-03
+ shell           3788                   1  3.5356E-03
+       1 t 0.0000E+00 dt 1.07E-03 flush i/o buffers            07/19/19 14:26:56
+       1 t 0.0000E+00 dt 1.07E-03 write d3plot file            07/19/19 14:26:56
+     469 t 4.9926E-01 dt 1.07E-03 write d3plot file            07/19/19 14:27:22
+     938 t 9.9958E-01 dt 1.07E-03 write d3plot file            07/19/19 14:27:48
+    1407 t 1.4999E+00 dt 1.07E-03 write d3plot file            07/19/19 14:28:15
+    1875 t 1.9992E+00 dt 1.07E-03 write d3plot file            07/19/19 14:28:44
+    2344 t 2.4995E+00 dt 1.07E-03 write d3plot file            07/19/19 14:29:15
+    2813 t 2.9998E+00 dt 1.07E-03 write d3plot file            07/19/19 14:29:45
+    3281 t 3.4991E+00 dt 1.07E-03 write d3plot file            07/19/19 14:30:16
+    3750 t 3.9994E+00 dt 1.07E-03 write d3plot file            07/19/19 14:30:47
+    4219 t 4.4997E+00 dt 1.07E-03 write d3plot file            07/19/19 14:31:18
+    4687 t 4.9990E+00 dt 1.07E-03 write d3plot file            07/19/19 14:31:49
+    5000 t 5.3329E+00 dt 1.07E-03 flush i/o buffers            07/19/19 14:32:10
+    5156 t 5.4993E+00 dt 1.07E-03 write d3plot file            07/19/19 14:32:20
+    5625 t 5.9996E+00 dt 1.07E-03 write d3plot file            07/19/19 14:32:52
+    6094 t 6.5000E+00 dt 1.07E-03 write d3plot file            07/19/19 14:33:24
+    6562 t 6.9992E+00 dt 1.07E-03 write d3plot file            07/19/19 14:33:56
+    7031 t 7.4995E+00 dt 1.07E-03 write d3plot file            07/19/19 14:34:28
+    7500 t 7.9999E+00 dt 1.07E-03 write d3plot file            07/19/19 14:35:00
+    7968 t 8.4991E+00 dt 1.07E-03 write d3plot file            07/19/19 14:35:32
+    8437 t 8.9994E+00 dt 1.07E-03 write d3plot file            07/19/19 14:36:04
+    8907 t 9.4999E+00 dt 1.06E-03 write d3plot file            07/19/19 14:36:37
+    9374 t 9.9990E+00 dt 1.07E-03 write d3plot file            07/19/19 14:37:09
+    9843 t 1.0500E+01 dt 1.07E-03 write d3plot file            07/19/19 14:37:41
+   10000 t 1.0667E+01 dt 1.07E-03 flush i/o buffers            07/19/19 14:37:52
+   10312 t 1.0999E+01 dt 1.06E-03 write d3plot file            07/19/19 14:38:14
+   10780 t 1.1499E+01 dt 1.07E-03 write d3plot file            07/19/19 14:38:46
+   11249 t 1.1999E+01 dt 1.07E-03 write d3plot file            07/19/19 14:39:18
+   11716 t 1.2500E+01 dt 1.07E-03 write d3plot file            07/19/19 14:39:51
+   12183 t 1.2999E+01 dt 1.07E-03 write d3plot file            07/19/19 14:40:23
+   12650 t 1.3500E+01 dt 1.07E-03 write d3plot file            07/19/19 14:40:55
+   13115 t 1.3999E+01 dt 1.07E-03 write d3plot file            07/19/19 14:41:26
+   13580 t 1.4499E+01 dt 1.07E-03 write d3plot file            07/19/19 14:41:58
+   14049 t 1.5000E+01 dt 1.07E-03 write d3plot file            07/19/19 14:42:30
+   14518 t 1.5500E+01 dt 1.07E-03 write d3plot file            07/19/19 14:43:02
+   14986 t 1.5999E+01 dt 1.06E-03 write d3plot file            07/19/19 14:43:34
+   15000 t 1.6014E+01 dt 1.06E-03 flush i/o buffers            07/19/19 14:43:35
+   15457 t 1.6499E+01 dt 1.06E-03 write d3plot file            07/19/19 14:44:07
+   15928 t 1.7000E+01 dt 1.06E-03 write d3plot file            07/19/19 14:44:40
+   16398 t 1.7500E+01 dt 1.07E-03 write d3plot file            07/19/19 14:45:15
+   16867 t 1.8000E+01 dt 1.07E-03 write d3plot file            07/19/19 14:45:49
+   17336 t 1.8499E+01 dt 1.06E-03 write d3plot file            07/19/19 14:46:22
+   17807 t 1.9000E+01 dt 1.06E-03 write d3plot file            07/19/19 14:46:55
+   18277 t 1.9499E+01 dt 1.06E-03 write d3plot file            07/19/19 14:47:28
+   18747 t 1.9999E+01 dt 1.06E-03 write d3plot file            07/19/19 14:48:00
+   19217 t 2.0499E+01 dt 1.06E-03 write d3plot file            07/19/19 14:48:33
+   19688 t 2.1000E+01 dt 1.06E-03 write d3plot file            07/19/19 14:49:06
+   20000 t 2.1331E+01 dt 1.06E-03 flush i/o buffers            07/19/19 14:49:27
+   20159 t 2.1500E+01 dt 1.06E-03 write d3plot file            07/19/19 14:49:38
+   20629 t 2.1999E+01 dt 1.06E-03 write d3plot file            07/19/19 14:50:11
+   21098 t 2.2499E+01 dt 1.07E-03 write d3plot file            07/19/19 14:50:43
+   21567 t 2.3000E+01 dt 1.07E-03 write d3plot file            07/19/19 14:51:16
+   22034 t 2.3499E+01 dt 1.07E-03 write d3plot file            07/19/19 14:51:48
+   22504 t 2.4000E+01 dt 1.06E-03 write d3plot file            07/19/19 14:52:20
+   22973 t 2.4500E+01 dt 1.07E-03 write d3plot file            07/19/19 14:52:52
+   23442 t 2.4999E+01 dt 1.06E-03 write d3plot file            07/19/19 14:53:24
+   23912 t 2.5499E+01 dt 1.06E-03 write d3plot file            07/19/19 14:53:56
+   24383 t 2.6000E+01 dt 1.06E-03 write d3plot file            07/19/19 14:54:28
+   24853 t 2.6500E+01 dt 1.06E-03 write d3plot file            07/19/19 14:55:01
+   25000 t 2.6656E+01 dt 1.06E-03 flush i/o buffers            07/19/19 14:55:11
+   25323 t 2.6999E+01 dt 1.06E-03 write d3plot file            07/19/19 14:55:33
+   25791 t 2.7500E+01 dt 1.07E-03 write d3plot file            07/19/19 14:56:05
+   26261 t 2.7999E+01 dt 1.06E-03 write d3plot file            07/19/19 14:56:38
+   26732 t 2.8499E+01 dt 1.06E-03 write d3plot file            07/19/19 14:57:10
+   27201 t 2.8999E+01 dt 1.07E-03 write d3plot file            07/19/19 14:57:42
+   27670 t 2.9499E+01 dt 1.07E-03 write d3plot file            07/19/19 14:58:14
+   28140 t 3.0000E+01 dt 1.06E-03 write d3plot file            07/19/19 14:58:46
+   28609 t 3.0499E+01 dt 1.06E-03 write d3plot file            07/19/19 14:59:19
+   29080 t 3.1000E+01 dt 1.06E-03 write d3plot file            07/19/19 14:59:51
+   29549 t 3.1499E+01 dt 1.06E-03 write d3plot file            07/19/19 15:00:23
+   30000 t 3.1979E+01 dt 1.07E-03 flush i/o buffers            07/19/19 15:00:54
+   30019 t 3.1999E+01 dt 1.07E-03 write d3plot file            07/19/19 15:00:56
+   30488 t 3.2500E+01 dt 1.07E-03 write d3plot file            07/19/19 15:01:28
+   30956 t 3.3000E+01 dt 1.07E-03 write d3plot file            07/19/19 15:02:00
+   31423 t 3.3499E+01 dt 1.07E-03 write d3plot file            07/19/19 15:02:31
+   31893 t 3.4000E+01 dt 1.07E-03 write d3plot file            07/19/19 15:03:04
+   32362 t 3.4500E+01 dt 1.07E-03 write d3plot file            07/19/19 15:03:36
+   32831 t 3.5000E+01 dt 1.07E-03 write d3plot file            07/19/19 15:04:08
+   33299 t 3.5500E+01 dt 1.07E-03 write d3plot file            07/19/19 15:04:40
+   33768 t 3.6000E+01 dt 1.07E-03 write d3plot file            07/19/19 15:05:13
+   34237 t 3.6500E+01 dt 1.07E-03 write d3plot file            07/19/19 15:05:45
+   34706 t 3.7000E+01 dt 1.07E-03 write d3plot file            07/19/19 15:06:17
+   35000 t 3.7313E+01 dt 1.06E-03 flush i/o buffers            07/19/19 15:06:37
+   35175 t 3.7499E+01 dt 1.07E-03 write d3plot file            07/19/19 15:06:49
+   35644 t 3.7999E+01 dt 1.06E-03 write d3plot file            07/19/19 15:07:22
+   36114 t 3.8499E+01 dt 1.06E-03 write d3plot file            07/19/19 15:07:54
+   36584 t 3.8999E+01 dt 1.06E-03 write d3plot file            07/19/19 15:08:26
+   37054 t 3.9499E+01 dt 1.07E-03 write d3plot file            07/19/19 15:08:58
+   37523 t 3.9999E+01 dt 1.07E-03 write d3plot file            07/19/19 15:09:30
+ 
+ *** termination time reached ***
+   37523 t 4.0000E+01 dt 1.07E-03 write d3dump01 file          07/19/19 15:09:31
+   37523 t 4.0000E+01 dt 1.07E-03 flush i/o buffers            07/19/19 15:09:31
+   37523 t 4.0000E+01 dt 1.07E-03 write d3plot file            07/19/19 15:09:31
+
+ N o r m a l    t e r m i n a t i o n                          07/19/19 15:09:31
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to complete solution   :     281K
+ Additional dynamically allocated memory:    4724K
+                                   Total:    5004K
+
+
+ P r o c e s s o r   #         0
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 5.3857E-01    0.02     5.5960E-01    0.02
+    KW Reading ......... 3.7440E-01    0.01     3.7715E-01    0.01
+    KW Writing ......... 1.9963E-02    0.00     3.0498E-02    0.00
+  MPP Decomposition .... 1.7746E+00    0.07     1.9018E+00    0.07
+    Init Proc .......... 1.2284E+00    0.05     1.2748E+00    0.05
+    Decomposition ...... 1.9679E-01    0.01     1.9950E-01    0.01
+    Translation ........ 3.4926E-01    0.01     4.2736E-01    0.02
+  Initialization ....... 4.9970E-01    0.02     5.9262E-01    0.02
+    Init Proc Phase 1 .. 4.2111E-01    0.02     4.4556E-01    0.02
+    Init Proc Phase 2 .. 3.1348E-02    0.00     3.5435E-02    0.00
+  Init solver .......... 4.3982E-02    0.00     4.4059E-02    0.00
+  Element processing ... 7.4308E+01    2.92     7.4518E+01    2.91
+    Solids ............. 5.7782E+01    2.27     5.7908E+01    2.26
+    Shells ............. 1.6057E+01    0.63     1.6088E+01    0.63
+  Binary databases ..... 2.9398E+00    0.12     3.4817E+00    0.14
+  ASCII database ....... 3.8176E+00    0.15     7.4093E+00    0.29
+  Contact algorithm .... 1.3320E+01    0.52     1.3369E+01    0.52
+    Interf. ID         1 1.4749E+00    0.06     1.5103E+00    0.06
+    Interf. ID         2 1.3192E-01    0.01     1.3417E-01    0.01
+    Interf. ID         3 8.3202E+00    0.33     8.3303E+00    0.33
+  ALE FSI Algorithm .... 1.8368E+03   72.15     1.8424E+03   72.01
+    FSI ID         1 ... 7.5400E+02   29.62     7.5632E+02   29.56
+    FSI ID         2 ... 4.6333E+02   18.20     4.6472E+02   18.16
+    FSI ID         3 ... 6.1940E+02   24.33     6.2127E+02   24.28
+  S-ALE Advection ...... 1.6970E+02    6.67     1.7034E+02    6.66
+    Mesh Update ........ 2.1589E+01    0.85     2.1632E+01    0.85
+    Ambient Elements ... 2.1021E-01    0.01     3.2060E-01    0.01
+    Preparation ........ 1.3426E+01    0.53     1.3439E+01    0.53
+    Flux Calculation ... 4.2288E+01    1.66     4.2434E+01    1.66
+    Post-processing .... 3.2016E+01    1.26     3.2137E+01    1.26
+    MPP Communication .. 6.0065E+01    2.36     6.0268E+01    2.36
+    Boundary Condition . 9.1096E-02    0.00     9.0929E-02    0.00
+  Rigid Bodies ......... 4.1890E+00    0.16     4.1834E+00    0.16
+  Time step size ....... 1.4066E+01    0.55     1.4092E+01    0.55
+  Bnd prescribed opt ... 1.8966E-01    0.01     1.8867E-01    0.01
+  Group force file ..... 1.5688E-01    0.01     2.4102E-01    0.01
+  Others ............... 5.7138E+00    0.22     5.8207E+00    0.23
+    Force Sharing ...... 4.8512E+00    0.19     4.8335E+00    0.19
+  Misc. 1 .............. 2.5496E+00    0.10     2.6050E+00    0.10
+    Scale Masses ....... 4.5135E-02    0.00     4.0063E-02    0.00
+    Force Constraints .. 5.9987E-02    0.00     6.1666E-02    0.00
+    Force to Accel ..... 1.0519E+00    0.04     1.0537E+00    0.04
+    Constraint Sharing . 4.3454E-02    0.00     4.3880E-02    0.00
+  Misc. 2 .............. 3.5160E+02   13.81     3.5259E+02   13.78
+  Misc. 3 .............. 5.0146E+01    1.97     5.0806E+01    1.99
+  Misc. 4 .............. 1.3465E+01    0.53     1.3537E+01    0.53
+    Timestep Init ...... 1.8404E+00    0.07     1.8499E+00    0.07
+    Apply Loads ........ 9.0065E+00    0.35     9.0009E+00    0.35
+    Compute exwork ..... 2.4405E+00    0.10     2.4546E+00    0.10
+  ----------------------------------------------------------------
+  T o t a l s            2.5458E+03  100.00     2.5587E+03  100.00
+
+
+ A v e r a g e s
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 5.5074E-01    0.02     5.5859E-01    0.02
+  MPP Decomposition .... 1.7994E+00    0.07     1.9015E+00    0.07
+    Init Proc .......... 1.2716E+00    0.05     1.2748E+00    0.05
+    Decomposition ...... 1.9719E-01    0.01     1.9951E-01    0.01
+    Translation ........ 3.3060E-01    0.01     4.2710E-01    0.02
+  Initialization ....... 5.1873E-01    0.02     6.1468E-01    0.02
+    Init Proc Phase 1 .. 3.9234E-01    0.02     4.4190E-01    0.02
+    Init Proc Phase 2 .. 3.3323E-02    0.00     3.5511E-02    0.00
+  Element processing ... 7.8529E+01    3.08     7.8726E+01    3.08
+    Solids ............. 6.2439E+01    2.45     6.2553E+01    2.44
+    Shells ............. 1.5657E+01    0.61     1.5707E+01    0.61
+  Binary databases ..... 3.3944E+00    0.13     3.4669E+00    0.14
+  ASCII database ....... 2.2746E+00    0.09     2.3525E+00    0.09
+  Contact algorithm .... 2.4792E+01    0.97     2.4846E+01    0.97
+    Interf. ID         1 1.4002E+00    0.05     1.4392E+00    0.06
+    Interf. ID         2 2.7504E-01    0.01     2.7831E-01    0.01
+    Interf. ID         3 1.8877E+01    0.74     1.8903E+01    0.74
+  ALE FSI Algorithm .... 1.8111E+03   71.01     1.8153E+03   70.95
+    FSI ID         1 ... 7.2176E+02   28.30     7.2344E+02   28.27
+    FSI ID         2 ... 4.7892E+02   18.78     4.8004E+02   18.76
+    FSI ID         3 ... 6.1037E+02   23.93     6.1177E+02   23.91
+  S-ALE Advection ...... 1.7736E+02    6.95     1.7913E+02    7.00
+    Mesh Update ........ 2.5088E+01    0.98     2.5120E+01    0.98
+    Ambient Elements ... 2.0798E-01    0.01     3.1261E-01    0.01
+    Preparation ........ 1.6674E+01    0.65     1.6689E+01    0.65
+    Flux Calculation ... 4.3743E+01    1.71     4.3861E+01    1.71
+    Post-processing .... 3.4269E+01    1.34     3.4383E+01    1.34
+    MPP Communication .. 5.7267E+01    2.25     5.8656E+01    2.29
+    Boundary Condition . 9.2044E-02    0.00     9.1264E-02    0.00
+  Rigid Bodies ......... 6.7866E+00    0.27     6.7875E+00    0.27
+  Time step size ....... 1.0507E+01    0.41     1.0523E+01    0.41
+  Bnd prescribed opt ... 1.5478E-01    0.01     1.5391E-01    0.01
+  Group force file ..... 1.2954E-01    0.01     1.7558E-01    0.01
+  Others ............... 1.9679E+01    0.77     1.9781E+01    0.77
+    Force Sharing ...... 1.8996E+01    0.74     1.9010E+01    0.74
+  Misc. 1 .............. 2.4853E+00    0.10     2.5261E+00    0.10
+    Scale Masses ....... 3.5255E-02    0.00     3.4578E-02    0.00
+    Force Constraints .. 4.4117E-02    0.00     4.4803E-02    0.00
+    Force to Accel ..... 1.0570E+00    0.04     1.0571E+00    0.04
+    Constraint Sharing . 4.1846E-02    0.00     4.2023E-02    0.00
+  Misc. 2 .............. 3.4531E+02   13.54     3.4609E+02   13.53
+  Misc. 3 .............. 5.2555E+01    2.06     5.2924E+01    2.07
+  Misc. 4 .............. 1.2721E+01    0.50     1.2771E+01    0.50
+    Timestep Init ...... 2.1872E+00    0.09     2.1940E+00    0.09
+    Apply Loads ........ 7.9715E+00    0.31     7.9654E+00    0.31
+    Compute exwork ..... 2.3890E+00    0.09     2.3847E+00    0.09
+  ----------------------------------------------------------------
+  T o t a l s            2.5507E+03  100.00     2.5587E+03  100.00
+
+ Problem time       =    4.0000E+01
+ Problem cycle      =     37523
+ Total CPU time     =      2551 seconds (   0 hours 42 minutes 31 seconds)
+ CPU time per zone cycle  =        513.660 nanoseconds
+ Clock time per zone cycle=        515.223 nanoseconds
+
+ Parallel execution with     48 MPP proc
+ NLQ used/max               120/   120
+
+  C P U   T i m i n g   i n f o r m a t i o n
+
+  Processor   Hostname                              CPU/Avg_CPU  CPU(seconds)
+  ---------------------------------------------------------------------------
+  #       0   compute-0-32.local                        0.99792   2.5465E+03
+  #       1   compute-0-32.local                        1.00110   2.5546E+03
+  #       2   compute-0-32.local                        1.00094   2.5543E+03
+  #       3   compute-0-32.local                        1.00081   2.5539E+03
+  #       4   compute-0-32.local                        1.00086   2.5541E+03
+  #       5   compute-0-32.local                        0.99819   2.5472E+03
+  #       6   compute-0-32.local                        0.99832   2.5476E+03
+  #       7   compute-0-32.local                        1.00109   2.5546E+03
+  #       8   compute-0-32.local                        1.00091   2.5542E+03
+  #       9   compute-0-32.local                        0.99599   2.5416E+03
+  #      10   compute-0-32.local                        1.00087   2.5541E+03
+  #      11   compute-0-32.local                        0.99579   2.5411E+03
+  #      12   compute-0-27.local                        1.00037   2.5528E+03
+  #      13   compute-0-27.local                        1.00061   2.5534E+03
+  #      14   compute-0-27.local                        1.00078   2.5539E+03
+  #      15   compute-0-27.local                        1.00069   2.5536E+03
+  #      16   compute-0-27.local                        1.00061   2.5534E+03
+  #      17   compute-0-27.local                        1.00071   2.5537E+03
+  #      18   compute-0-27.local                        0.99933   2.5501E+03
+  #      19   compute-0-27.local                        1.00019   2.5523E+03
+  #      20   compute-0-27.local                        1.00039   2.5528E+03
+  #      21   compute-0-27.local                        1.00053   2.5532E+03
+  #      22   compute-0-27.local                        1.00054   2.5532E+03
+  #      23   compute-0-27.local                        1.00056   2.5533E+03
+  #      24   compute-0-48.local                        1.00041   2.5529E+03
+  #      25   compute-0-48.local                        0.99959   2.5508E+03
+  #      26   compute-0-48.local                        1.00068   2.5536E+03
+  #      27   compute-0-48.local                        0.99974   2.5512E+03
+  #      28   compute-0-48.local                        1.00059   2.5534E+03
+  #      29   compute-0-48.local                        0.99738   2.5452E+03
+  #      30   compute-0-48.local                        1.00069   2.5536E+03
+  #      31   compute-0-48.local                        1.00093   2.5542E+03
+  #      32   compute-0-48.local                        1.00069   2.5536E+03
+  #      33   compute-0-48.local                        1.00058   2.5533E+03
+  #      34   compute-0-48.local                        0.99716   2.5446E+03
+  #      35   compute-0-48.local                        0.99709   2.5444E+03
+  #      36   compute-0-0.local                         1.00054   2.5532E+03
+  #      37   compute-0-0.local                         1.00049   2.5531E+03
+  #      38   compute-0-0.local                         1.00034   2.5527E+03
+  #      39   compute-0-0.local                         1.00009   2.5521E+03
+  #      40   compute-0-0.local                         1.00087   2.5541E+03
+  #      41   compute-0-0.local                         1.00081   2.5539E+03
+  #      42   compute-0-0.local                         1.00034   2.5527E+03
+  #      43   compute-0-0.local                         1.00061   2.5534E+03
+  #      44   compute-0-0.local                         1.00061   2.5534E+03
+  #      45   compute-0-0.local                         1.00055   2.5532E+03
+  #      46   compute-0-0.local                         1.00057   2.5533E+03
+  #      47   compute-0-0.local                         1.00056   2.5533E+03
+  ---------------------------------------------------------------------------
+  T o t a l s                                                     1.2249E+05
+
+
+ Start time   07/19/2019 14:26:53  
+ End time     07/19/2019 15:09:31  
+ Elapsed time    2558 seconds for   37523 cycles using    48 MPP procs
+             (      0 hour  42 minutes 38 seconds)
+
+ N o r m a l    t e r m i n a t i o n                          07/19/19 15:09:31

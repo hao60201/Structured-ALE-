@@ -1,0 +1,40 @@
+
+     |_________________________________________________|
+     |                                                 |
+     |  LS-DYNA, A Program for Nonlinear Dynamic       |
+     |  Analysis of Structures in Three Dimensions     |
+     |  Version : mpp s Dev       Date: 07/19/2019     |
+     |  Revision: 139039          Time: 14:09:31       |
+
+  ALE FSI Algorithm .... 1.8111E+03   71.01     1.8153E+03   70.95
+    FSI ID         1 ... 7.2176E+02   28.30     7.2344E+02   28.27
+    FSI ID         2 ... 4.7892E+02   18.78     4.8004E+02   18.76
+    FSI ID         3 ... 6.1037E+02   23.93     6.1177E+02   23.91
+  S-ALE Advection ...... 1.7736E+02    6.95     1.7913E+02    7.00
+    Mesh Update ........ 2.5088E+01    0.98     2.5120E+01    0.98
+    Ambient Elements ... 2.0798E-01    0.01     3.1261E-01    0.01
+    Preparation ........ 1.6674E+01    0.65     1.6689E+01    0.65
+    Flux Calculation ... 4.3743E+01    1.71     4.3861E+01    1.71
+    Post-processing .... 3.4269E+01    1.34     3.4383E+01    1.34
+    MPP Communication .. 5.7267E+01    2.25     5.8656E+01    2.29
+    Boundary Condition . 9.2044E-02    0.00     9.1264E-02    0.00
+
+-----------------------------------------------------------------------
+
+  ALE Structure Coupling 5.1793E+02   46.91     5.1908E+02   43.70
+    CPL_STR ID    1 .... 4.5567E+01    4.13     4.5653E+01    3.84
+    CPL_STR ID    2 .... 8.0366E+00    0.73     8.0716E+00    0.68
+    CPL_STR ID    3 .... 4.4024E+01    3.99     4.4111E+01    3.71
+  S-ALE Advection ...... 2.0511E+02   18.58     2.0571E+02   17.32
+    Mesh Update ........ 4.6425E+01    4.20     4.6541E+01    3.92
+    Ambient Elements ... 2.5256E-01    0.02     4.0175E-01    0.03
+    Preparation ........ 1.3950E+01    1.26     1.3953E+01    1.17
+    Flux Calculation ... 4.3180E+01    3.91     4.3300E+01    3.65
+    Post-processing .... 3.3136E+01    3.00     3.3213E+01    2.80
+    Miscellaneous ...... 1.7780E-02    0.00     1.8469E-02    0.00
+    MPP Communication .. 6.8052E+01    6.16     6.8187E+01    5.74
+    Boundary Condition . 1.0113E-01    0.01     1.0046E-01    0.01
+
+-----------------------------------------------------------------------
+
+517.93/1811.1=28.59% time saving 61%

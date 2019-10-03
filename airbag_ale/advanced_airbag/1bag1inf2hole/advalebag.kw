@@ -1,0 +1,115 @@
+$ Translated ALE input deck for ADVANCED_ALE bag:  1                            
+$ Part set of all airbag parts                                                  
+*SET_PART_LIST                                                                  
+         2
+         1         2         3
+         4
+         5
+$ Part set of air parts, outer and inner                                        
+*SET_PART_LIST                                                                  
+         3
+        20
+$ Part set of gas parts                                                         
+*SET_PART_LIST                                                                  
+         4
+$   Inflator Gases                                                              
+        22
+$ Part set of switched gas parts for hole   1                                   
+*SET_PART_LIST                                                                  
+         5
+        23
+$ Part set of switched gas parts for hole   2                                   
+*SET_PART_LIST                                                                  
+         6
+        24
+$ Hourglass control for air and gas                                             
+*HOURGLASS                                                                      
+         1          0.0000E+00
+$ Air material                                                                  
+*MAT_GAS_MIXTURE                                                                
+         2             8.31400
+  0.028718
+  27.01367
+0.6621E-02
+    0.0000
+$ Air section                                                                   
+*SECTION_SOLID                                                                  
+         2        11
+$ Background Air Part                                                           
+*PART                                                                           
+Part for the outer air of ALE airbag                                            
+        20         2         2                   1
+$ Gas material                                                                  
+*MAT_GAS_MIXTURE                                                                
+         3             8.31400
+  0.024900  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+  29.68000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+0.8800E-020.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+00
+0.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+00
+$ Section for inflator gas                                                      
+*SECTION_POINT_SOURCE_MIXTURE                                                   
+         3         2                   3
+         1
+      9272         1    0.0001
+*PART                                                                           
+Part for the gas of inflator   1 of ADVANCED_ALE bag                            
+        22         3         3                   1
+$ Section for inflator gas                                                      
+Switched gas of hole   1 of inflator   1 of ADV_ALE bag                         
+        23         2         3                   1
+$ Section for inflator gas                                                      
+Switched gas of hole   2 of inflator   1 of ADV_ALE bag                         
+        24         2         3                   1
+*ALE_MULTI-MATERIAL_GROUP                                                       
+$ AMMG=1 for Inflator gas; 2 for Air; 3 for Switched gas                        
+         4
+         3
+         5
+         6
+*INITIAL_GAS_MIXTURE                                                            
+$ Initialize the background air for inflator gas                                
+        20         1         1  298.0000
+0.1174E+01
+*INITIAL_GAS_MIXTURE                                                            
+$ Initialize the background air for ambient air                                 
+        20         1         2  298.0000
+0.1174E+01
+*INITIAL_GAS_MIXTURE                                                            
+$ Initialize the background air for gas thru h 1e                               
+        20         1         3  298.0000
+0.1174E+01
+*INITIAL_GAS_MIXTURE                                                            
+$ Initialize the background air for gas thru h 2e                               
+        20         1         4  298.0000
+0.1174E+01
+*SET_MULTI-MATERIAL_GROUP_LIST                                                  
+$ SMMG for inflator and vent-in gas, for switchin                               
+         1
+         1
+*SET_MULTI-MATERIAL_GROUP_LIST                                                  
+$ SMMG for inflator gas vented through hole        300                          
+         2
+         3
+*SET_MULTI-MATERIAL_GROUP_LIST                                                  
+$ SMMG for inflator gas vented through hole        310                          
+         3
+         4
+*SET_MULTI-MATERIAL_GROUP_LIST                                                  
+$ SMMG for inflator and vent-in gas - for coupling                              
+         4
+         1
+*ALE_FSI_SWITCH_MMG_ID                                                          
+$ MMG   1 switched to   2 when vented thru hole   1                             
+       300
+         4         1         4   -0.0200                                       1
+         1         2    3.0000
+*ALE_FSI_SWITCH_MMG_ID                                                          
+$ MMG   1 switched to   3 when vented thru hole   2                             
+       310
+         5         1         4   -0.0200                                       1
+         1         3    3.0000
+*CONSTRAINED_LAGRANGE_IN_SOLID                                                  
+$Coupling bet. bag  1 & inflator gas of SMMGID          4                       
+         1         3         0                   4         4         2        -4
+                     -321.0000    0.0000    0.3000         1         0
+                                       2    0.1000                   0         0

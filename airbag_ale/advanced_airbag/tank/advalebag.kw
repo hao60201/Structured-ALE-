@@ -1,0 +1,83 @@
+$ Translated ALE input deck for ADVANCED_ALE bag:  1                            
+$ Part set of all airbag parts                                                  
+*SET_PART_LIST                                                                  
+       511
+         1         3
+$ Part set of air parts, outer and inner                                        
+*SET_PART_LIST                                                                  
+       512
+     50000
+$ Part set of gas parts                                                         
+*SET_PART_LIST                                                                  
+       513
+$   Inflator Gases                                                              
+    100002
+$ Hourglass control for air and gas                                             
+*HOURGLASS                                                                      
+         1          0.0000E+00
+$ Air section                                                                   
+*SECTION_SOLID                                                                  
+    100001        11
+$ Background Air Part                                                           
+*PART                                                                           
+Part for the outer air of ALE airbag                                            
+     50000    100001    100001                   1
+$ Updated Air material for tank test                                            
+*MAT_GAS_MIXTURE                                                                
+    100001             8.31400
+  0.028850  0.028000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+  29.05000  33.48800   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+0.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+00
+0.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+00
+$ Gas material for tank test                                                    
+*MAT_GAS_MIXTURE                                                                
+    100002             8.31400
+  0.028850  0.028000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+  29.05000  33.48800   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+0.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+00
+0.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+000.0000E+00
+$ Section for inflator gas of tank test                                         
+*SECTION_POINT_SOURCE_MIXTURE                                                   
+    100002      2001                2002
+                2003
+    100019         1   13.5000
+    100020         2   13.5000
+    100021         3   13.5000
+    100022         4   13.5000
+    100023         5   13.5000
+    100024         6   13.5000
+    100017         7   13.5000
+    100018         8   13.5000
+*PART                                                                           
+Part for the gas of inflator   1 of ADVANCED_ALE bag                            
+    100002    100002    100002                   1
+*ALE_MULTI-MATERIAL_GROUP                                                       
+$ AMMG=1 for Inflator gas; 2 for Air; 3 for Switched gas                        
+       513
+       512
+*INITIAL_GAS_MIXTURE                                                            
+$ Initialize the background air for inflator gas                                
+     50000         1         1  295.0000
+0.1192E-08
+*INITIAL_GAS_MIXTURE                                                            
+$ Initialize the background air for ambient air                                 
+     50000         1         2  295.0000
+0.1192E-08
+*INITIAL_VOLUME_FRACTION_GEOMETRY                                               
+$ Initialize volume fraction for tank test                                      
+     50000         1         2
+         1         1         1
+       511         0         1
+*SET_MULTI-MATERIAL_GROUP_LIST                                                  
+$ SMMG for inflator and vent-in gas, for switchin                               
+         1
+         1
+*SET_MULTI-MATERIAL_GROUP_LIST                                                  
+$ SMMG for inflator and vent-in gas - for coupling                              
+         2
+         1
+*CONSTRAINED_LAGRANGE_IN_SOLID                                                  
+$Coupling bet. bag  1 & inflator gas of SMMGID          2                       
+       123       512         0                   4         4         2        -2
+                    -9010.0000    0.0000    0.3000         0         0
+                                       2    0.0000                   0         0
